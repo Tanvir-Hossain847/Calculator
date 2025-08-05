@@ -77,6 +77,28 @@
     currentInput = '';
     document.getElementById('display').value = '';
   }
+
+  document.addEventListener('keydown', function (event) {
+  const key = event.key; // gets the actual key pressed
+  const validKeys = ['0','1','2','3','4','5','6','7','8','9','.','+','-','*','/'];
+
+  if (validKeys.includes(key)) {
+    press(key); // act like button press
+  } else if (key === 'Enter') {
+    calculate(); // equals
+  } else if (key === 'Backspace') {
+    backspace(); // delete one character
+  } else if (key === 'c' || key === 'C') {
+    clearDisplay(); // clear screen
+  }
+});
+
+function backspace() {
+  currentInput = currentInput.slice(0, -1); // removes last character
+  document.getElementById('display').value = currentInput;
+}
+
+
 </script>
 
 </body>

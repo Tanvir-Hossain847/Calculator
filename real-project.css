@@ -22,9 +22,12 @@ body{
     text-align: right;
     margin-bottom: 50px;
     font-size: 24px;
-    background-color: rgb(255, 219, 206);
+    background-color: rgb(255, 238, 232);
     border: none;
     border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+    color: orangered;
 }
 
 button{
@@ -38,6 +41,7 @@ button{
     border-radius: 5px;
     padding: 10px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 button:hover{
